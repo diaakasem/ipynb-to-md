@@ -2,6 +2,16 @@
 name = "ipynb-to-md"
 version = "0.1.0"
 edition = "2021"
+authors = ["Diaa Kasem <me@diaa.me>"]
+description = "Convert Jupyter Notebooks to Markdown files"
+license = "MIT"
+homepage = "https://github.com/diaakasem/ipynb-to-md"
+repository = "https://github.com/diaakasem/ipynb-to-md"
+readme = "README.md"
+keywords = ["jupyter", "notebook", "markdown", "ipynb", "convert", "yazi"]
+categories = ["development-tools", "text-processing", "markdown", "jupyter"]
+documentation = "https://docs.rs/ipynb-to-md"
+default-run = "ipynb-to-md"
 
 [dependencies]
 serde = { version = "1.0.217", features = ["derive"] }
