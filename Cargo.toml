@@ -9,7 +9,7 @@ homepage = "https://github.com/diaakasem/ipynb-to-md"
 repository = "https://github.com/diaakasem/ipynb-to-md"
 readme = "README.md"
 keywords = ["jupyter", "notebook", "markdown", "ipynb", "convert"]
-categories = ["development-tools", "text-processing", "markdown", "jupyter"]
+categories = ["development-tools", "text-processing"]
 documentation = "https://docs.rs/ipynb-to-md"
 default-run = "ipynb-to-md"
 
