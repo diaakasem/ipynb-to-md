@@ -35,6 +35,12 @@ I personally use it in Yazi to preview ipynb files.
 
 ### Installation
 
+#### Via Cargo
+
+```bash
+cargo install ipynb-to-md
+```
+
 #### Cloning the Repository
 
 ```bash
@@ -42,7 +48,7 @@ git clone https://github.com/<your-username>/ipynb-to-md.git
 cd ipynb-to-md
 ```
 
-#### Building and Running
+##### Building and Running
 1.	Build the project:
 
 ```bash
@@ -66,19 +72,32 @@ Then the compiled binary will be located in `target/release/ipynb-to-md`.
 ### Usage
 
 #### Usage:
-`ipynb-to-md <input.ipynb> [output.md]`
-
--	input.ipynb: The path to a valid Jupyter Notebook file.
--	output.md: Optional path to the resulting Markdown file.
-    -	If not specified, the converted Markdown is printed to standard output.
-
-#### Example:
 
 ```bash
-cargo run -- my_notebook.ipynb converted_notebook.md
+ipynb-to-md -f html -i my_notebook.ipynb -o converted_notebook.md
+```
+
+or 
+
+```bash
+cat my_notebook.ipynb | ipynb-to-md > converted_notebook.md
 ```
 
 After running, you should see either an on-screen or file-based representation of your original notebook in Markdown format.
+
+-	my_notebook.ipynb: The path to a valid Jupyter Notebook file.
+-	converted_notebook.md: Optional path to the resulting Markdown file.
+    -	If not specified, the converted Markdown is printed to standard output.
+
+##### Options:
+-   `-i, --input <INPUT>`: The path to a valid Jupyter Notebook file. If not specified, the program will read from standard input.
+-   `-o, --output <OUTPUT>`: Optional path to the resulting Markdown file.
+    -   If not specified, the converted Markdown is printed to standard output.
+-   `-f, --format <FORMAT>`  Output format (text is default) [default: text] [possible values: text, html]
+-   `-h, --help`: Display the help message.
+-   `-V, --version`: Display the version number.
+
+#### Example:
 
 ##### Example
 
@@ -110,16 +129,16 @@ Sample .ipynb content might look like this (in abbreviated JSON form):
 
 When converted, you’d get:
 
-```markdown
+````markdown
 # My Notebook
 This is a markdown cell
 
 ```python
 print("Hello, world!")
-``\`
+```
 
 Hello, world!
-```
+````
 
 ## License
 
@@ -138,5 +157,5 @@ We appreciate your feedback and contributions!
 
 ---
 
-**Happy coding!**  
+**Happy coding!**
 If you find this tool helpful, consider giving the repository a star ⭐ on GitHub!
