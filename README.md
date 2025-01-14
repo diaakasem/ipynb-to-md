@@ -2,7 +2,7 @@
 
 A simple command-line tool that converts Jupyter/IPython Notebook (.ipynb) files into Markdown (.md) files.
 This is especially handy when you want to share your notebook content (including code snippets and outputs) in Markdown-based documentation.
-I personally use it in Yazi to preview ipynb files.
+I personally use it in Yazi to preview ipynb files. Using this [ipynb.yazi plugin](https://github.com/diaakasem/ipynb.yazi)
 
 ## Table of Contents
 -	Features
@@ -58,7 +58,7 @@ cargo build
 2.	Run the project:
 
 ```bash
-cargo run -- <input.ipynb> [output.md]
+cargo run -- -i <input.ipynb> [ -o output.md ]
 ```
 
 If you prefer a release build (optimized for performance), use:
